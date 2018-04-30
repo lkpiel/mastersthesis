@@ -32,12 +32,12 @@ def format(data):
     data.loc[mask, column_name] = 1
     return data
 
-baseline_age_group_val = pandas.read_table("./baseline/val/age_group.txt", sep=" ")
-baseline_age_group_test = pandas.read_table("./baseline/test/age_group.txt", sep=" ")
+baseline_age_group_val = pandas.read_table("./val/age_group.txt", sep=" ")
+baseline_age_group_test = pandas.read_table("./test/age_group.txt", sep=" ")
 
 
-baseline_gender_val = pandas.read_table("./baseline/val/gender.txt", sep=" ")
-baseline_gender_test = pandas.read_table("./baseline/test/gender.txt", sep=" ")
+baseline_gender_val = pandas.read_table("./val/gender.txt", sep=" ")
+baseline_gender_test = pandas.read_table("./test/gender.txt", sep=" ")
 
 
 
