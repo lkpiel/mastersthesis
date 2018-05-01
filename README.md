@@ -1,7 +1,8 @@
 # Speech-based identification of children's gender and age with neural networks
 ### Leo Kristopher Piel's Master's Thesis
-This is a repository for Leo Kristopher Piel's Master's thesis. It contains code for the built models and conducted expoeriments.  
-The code cannot be run, because the training, validation and test data are not included in this repository. 
+This is a repository for Leo Kristopher Piel's Master's thesis. It contains code for the built models and conducted expoeriments. 
+  
+**NB!** The code cannot be run, because the training, validation and test data are not included in this repository. 
 ### Project structure
 #### Folders
 * **baseline:** contains files related to baseline system predictions analysis.
