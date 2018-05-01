@@ -53,13 +53,12 @@ test_data_i_vectors = format(test_data_i_vectors)
 test_labels_age_group = onehot(test_data_i_vectors['AgeGroup'])
 test_labels_age_group_males = onehot(test_data_i_vectors['AgeGroup'][test_data_i_vectors['Gender'] == 0])
 test_labels_age_group_females = onehot(test_data_i_vectors['AgeGroup'][test_data_i_vectors['Gender'] == 1])
-print (len(test_data))
 test_data_indexes_used_in_survey = []
 
-for i in range(0, len(test_data) + 1):
+for i in range(0, len(test_data_i_vectors)):
     not_in_excluded = []
     for j in range(1, 10):
-        if ('_' + str(j) + '_' not in test_data.iloc[i]['Utterance']):
+        if ('_' + str(j) + '_' not in test_data_i_vectors.iloc[i]['Utterance']):
             not_in_excluded.append(j)
     if (len(not_in_excluded) == 9):
         test_data_indexes_used_in_survey.append(i)
@@ -67,7 +66,7 @@ for i in range(0, len(test_data) + 1):
 
 test_labels_gender = onehot(test_data_i_vectors['Gender'])
 test_labels_age_group_used_in_survey = test_labels_age_group[test_data_indexes_used_in_survey]
-test_labels_age_group_used_in_survey = test_labels_gender[test_data_indexes_used_in_survey]
+test_labels_gender_used_in_survey = test_labels_gender[test_data_indexes_used_in_survey]
 
 
 print ("LABELS LOADED")
@@ -458,7 +457,6 @@ model_94_males_original_test_age_group= np.asarray(formatAgePredictions(model_94
 model_94_females_original_test_age_group= np.asarray(formatAgePredictions(model_94_females_original_test_age_group))
 
 
-'''
 print ("\nVALIDATION ACCURACIES")
 print ("dnn_1_val accuracy " + str(getAgeGroupModelAccuracy(dnn_1_val, val_labels_age_group)))
 print ("dnn_2_val accuracy " + str(getAgeGroupModelAccuracy(dnn_2_val, val_labels_age_group)))
@@ -777,7 +775,6 @@ print ("dnn_6_females_test_age_group accuracy " + str(getAgeGroupModelAccuracy(d
 print ("dnn_6_males_test_age accuracy " + str(getAgeGroupModelAccuracy(dnn_6_males_test_age, test_labels_age_group_males)))
 print ("dnn_6_females_test_age accuracy " + str(getAgeGroupModelAccuracy(dnn_6_females_test_age, test_labels_age_group_females)))
 
-'''
 #AVERAGING
 def averagePredictions(predictions, weights, data):
     correct_predictions = []
