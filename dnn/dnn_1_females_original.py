@@ -113,7 +113,7 @@ dnn_1.compile(loss='categorical_crossentropy', optimizer=SGD(0.01), metrics=['ac
 print ("dnn_1 MODEL COMPILED")
 
 
-checkpoint = ModelCheckpoint(filepath='/home/hpc_lkpiel/models/dnn_1.hdf5', monitor='val_acc', save_best_only=True)
+checkpoint = ModelCheckpoint(filepath='/models/dnn_1.hdf5', monitor='val_acc', save_best_only=True)
 
 '''
 history = dnn_1.fit(
@@ -131,7 +131,7 @@ modelHistory = np.load('../history/dnn/dnn_1.npy').item()
 print ("HISTORY: ")
 print (modelHistory)
 
-dnn_1.load_weights('/home/hpc_lkpiel/models/dnn_1.hdf5')
+dnn_1.load_weights('/models/dnn_1.hdf5')
 
 testResult = dnn_1.evaluate(test_i_vectors, test_labels_age_group)
 
@@ -142,7 +142,7 @@ print ("DONE dnn_1")
 
 
 '''
-dnn_1.load_weights('/home/hpc_lkpiel/models/dnn_1.hdf5')
+dnn_1.load_weights('/models/dnn_1.hdf5')
 
 val_predictions = dnn_1.predict(val_i_vectors_females)
 print ("VAL PREDICTED")

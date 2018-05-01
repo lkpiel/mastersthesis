@@ -94,7 +94,7 @@ dnn_1_train_predictions.compile(loss='categorical_crossentropy', optimizer=SGD(0
 print ("dnn_1_train_predictions MODEL COMPILED")
 
 
-checkpoint = ModelCheckpoint(filepath='/home/hpc_lkpiel/models/dnn_1_train_predictions.hdf5', monitor='acc', save_best_only=True)
+checkpoint = ModelCheckpoint(filepath='/models/dnn_1_train_predictions.hdf5', monitor='acc', save_best_only=True)
 
 
 history = dnn_1_train_predictions.fit(
@@ -112,7 +112,7 @@ modelHistory = np.load('../history/dnn/dnn_1_train_predictions.npy').item()
 print ("HISTORY: ")
 print (modelHistory)
 
-dnn_1_train_predictions.load_weights('/home/hpc_lkpiel/models/dnn_1_train_predictions.hdf5')
+dnn_1_train_predictions.load_weights('/models/dnn_1_train_predictions.hdf5')
 
 print (dnn_1_train_predictions.evaluate(val_i_vectors, val_labels_age_group))
 print (dnn_1_train_predictions.evaluate(test_i_vectors, test_labels_age_group))

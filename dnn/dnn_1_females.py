@@ -119,7 +119,7 @@ dnn_1_females.compile(loss='categorical_crossentropy', optimizer=SGD(0.01), metr
 print ("dnn_1_females MODEL COMPILED")
 
 
-checkpoint = ModelCheckpoint(filepath='/home/hpc_lkpiel/models/dnn_1_females.hdf5', monitor='val_acc', save_best_only=True)
+checkpoint = ModelCheckpoint(filepath='/models/dnn_1_females.hdf5', monitor='val_acc', save_best_only=True)
 
 
 history = dnn_1_females.fit(
@@ -137,7 +137,7 @@ modelHistory = np.load('../history/dnn/dnn_1_females.npy').item()
 print ("HISTORY: ")
 print (modelHistory)
 
-dnn_1_females.load_weights('/home/hpc_lkpiel/models/dnn_1_females.hdf5')
+dnn_1_females.load_weights('/models/dnn_1_females.hdf5')
 
 
 

@@ -261,7 +261,7 @@ model_88.compile(loss={'group_output':'categorical_crossentropy', 'gender':'cate
 print ("model_88 COMPILED")
 
 
-checkpoint = ModelCheckpoint(filepath='/home/hpc_lkpiel/models/model_88.hdf5', monitor='val_group_output_acc', save_best_only=True)
+checkpoint = ModelCheckpoint(filepath='/models/model_88.hdf5', monitor='val_group_output_acc', save_best_only=True)
 '''
 
 history = model_88.fit([train_data_padded],
@@ -279,7 +279,7 @@ modelHistory = np.load('../history/history_model_88.npy').item()
 print ("HISTORY: ")
 print (modelHistory)
 '''
-model_88.load_weights('/home/hpc_lkpiel/models/model_88.hdf5')
+model_88.load_weights('/models/model_88.hdf5')
 
 
 

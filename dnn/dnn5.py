@@ -100,9 +100,9 @@ multi_model.compile(loss={'group_output':'categorical_crossentropy', 'gender_out
 print ("dnn_5 MODEL COMPILED")
 
 
-checkpoint = ModelCheckpoint(filepath='/home/hpc_lkpiel/models/dnn_5.hdf5', monitor='val_group_output_acc', save_best_only=True)
+checkpoint = ModelCheckpoint(filepath='/models/dnn_5.hdf5', monitor='val_group_output_acc', save_best_only=True)
 
-multi_model.load_weights('/home/hpc_lkpiel/models/dnn_5.hdf5')
+multi_model.load_weights('/models/dnn_5.hdf5')
 
 history = multi_model.fit(
     x=train_i_vectors,

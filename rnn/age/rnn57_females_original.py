@@ -282,7 +282,7 @@ model_57.compile(loss='categorical_crossentropy',
 print ("model_57 COMPILED")
 
 
-checkpoint = ModelCheckpoint(filepath='/home/hpc_lkpiel/models/model_57.hdf5', monitor='val_acc', save_best_only=True)
+checkpoint = ModelCheckpoint(filepath='/models/model_57.hdf5', monitor='val_acc', save_best_only=True)
 '''
 
 history = model_57.fit([train_data_padded, train_i_vectors],
@@ -302,7 +302,7 @@ print ("HISTORY: ")
 print (modelHistory)
 '''
 
-model_57.load_weights('/home/hpc_lkpiel/models/model_57.hdf5')
+model_57.load_weights('/models/model_57.hdf5')
 
 val_predictions = model_57.predict([val_data_padded, val_i_vectors_females])
 print ("VAL PREDICTED")

@@ -234,7 +234,7 @@ model_31.compile(loss='categorical_crossentropy', optimizer="adam", metrics=['ac
 print ("model_31 COMPILED")
 
 
-checkpoint = ModelCheckpoint(filepath='/home/hpc_lkpiel/models/model_31.hdf5', monitor='val_loss', save_best_only=True)
+checkpoint = ModelCheckpoint(filepath='/models/model_31.hdf5', monitor='val_loss', save_best_only=True)
 '''
 history = model_31.fit(x=train_data_padded,
         y=smooth_labels(train_labels_age_group, 0.2),
@@ -251,7 +251,7 @@ modelHistory = np.load('../history/history_model_31.npy').item()
 print ("HISTORY: ")
 print (modelHistory)
 '''
-model_31.load_weights('/home/hpc_lkpiel/models/model_31.hdf5')
+model_31.load_weights('/models/model_31.hdf5')
 
 
 val_predictions = model_31.predict(val_data_padded)

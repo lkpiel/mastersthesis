@@ -103,7 +103,7 @@ multi_model.compile(loss={'group_output':'categorical_crossentropy', 'gender_out
 print ("dnn_8 MODEL COMPILED")
 
 
-checkpoint = ModelCheckpoint(filepath='/home/hpc_lkpiel/models/dnn_8.hdf5', monitor='val_age_output_age_group_accuracy', save_best_only=True)
+checkpoint = ModelCheckpoint(filepath='/models/dnn_8.hdf5', monitor='val_age_output_age_group_accuracy', save_best_only=True)
 
 history = multi_model.fit(
     x=train_i_vectors,

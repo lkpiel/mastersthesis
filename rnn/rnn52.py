@@ -255,7 +255,7 @@ print ("model_52 BUILT")
 model_52.compile(loss='mse', optimizer=SGD(0.01), metrics=[age_group_accuracy])
 print ("model_52 COMPILED")
 
-checkpoint = ModelCheckpoint(filepath='/home/hpc_lkpiel/models/model_52.hdf5', monitor='val_age_group_accuracy', save_best_only=True)
+checkpoint = ModelCheckpoint(filepath='/models/model_52.hdf5', monitor='val_age_group_accuracy', save_best_only=True)
 
 history = model_52.fit(x=train_data_padded,
         y=train_labels_age,
@@ -271,7 +271,7 @@ modelHistory = np.load('../history/history_model_52.npy').item()
 
 print ("HISTORY: ")
 print (modelHistory)
-model_52.load_weights('/home/hpc_lkpiel/models/model_52.hdf5')
+model_52.load_weights('/models/model_52.hdf5')
 
 valResult = model_52.evaluate(val_data_padded, val_labels_age)
 testResult = model_52.evaluate(test_data_padded, test_labels_age)

@@ -253,10 +253,10 @@ print ("model_82 BUILT")
 model_82.compile(loss='mse', optimizer=SGD(0.01), metrics=[age_group_accuracy])
 print ("model_82 COMPILED")
 
-checkpoint = ModelCheckpoint(filepath='/home/hpc_lkpiel/models/model_82.hdf5', monitor='val_age_group_accuracy', save_best_only=True)
+checkpoint = ModelCheckpoint(filepath='/models/model_82.hdf5', monitor='val_age_group_accuracy', save_best_only=True)
 
 
-model_82.load_weights('/home/hpc_lkpiel/models/model_78.hdf5')
+model_82.load_weights('/models/model_78.hdf5')
 '''
 history = model_82.fit(x=train_data_padded,
         y=train_labels_age,
@@ -273,7 +273,7 @@ modelHistory = np.load('../history/history_model_82.npy').item()
 print ("HISTORY: ")
 print (modelHistory)
 '''
-model_82.load_weights('/home/hpc_lkpiel/models/model_82.hdf5')
+model_82.load_weights('/models/model_82.hdf5')
 
 val_predictions = model_82.predict(val_data_padded)
 print ("VAL PREDICTED")

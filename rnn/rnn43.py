@@ -242,10 +242,10 @@ print ("model_43 BUILT")
 
 model_43.compile(loss='categorical_crossentropy', optimizer=SGD(0.01), metrics=['accuracy'])
 print ("model_43 COMPILED")
-model_43.load_weights('/home/hpc_lkpiel/models/model_43.hdf5')
+model_43.load_weights('/models/model_43.hdf5')
 
 
-checkpoint = ModelCheckpoint(filepath='/home/hpc_lkpiel/models/model_43.hdf5', monitor='val_acc', save_best_only=True)
+checkpoint = ModelCheckpoint(filepath='/models/model_43.hdf5', monitor='val_acc', save_best_only=True)
 '''
 history = model_43.fit(x=train_data_padded,
         y=train_labels_age_group,
@@ -263,7 +263,7 @@ print ("HISTORY: ")
 print (modelHistory)
 
 '''
-model_43.load_weights('/home/hpc_lkpiel/models/model_43.hdf5')
+model_43.load_weights('/models/model_43.hdf5')
 
 val_predictions = model_43.predict(val_data_padded)
 print ("VAL PREDICTED")

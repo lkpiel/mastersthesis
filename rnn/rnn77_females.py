@@ -244,7 +244,7 @@ model_77_females.compile(loss='categorical_crossentropy', optimizer="adam", metr
 print ("model_77_females COMPILED")
 
 
-checkpoint = ModelCheckpoint(filepath='/home/hpc_lkpiel/models/model_77_females.hdf5', monitor='val_loss', save_best_only=True)
+checkpoint = ModelCheckpoint(filepath='/models/model_77_females.hdf5', monitor='val_loss', save_best_only=True)
 print ("WEIGHTS LOADED")
 
 history = model_77_females.fit(x=train_data_padded,
@@ -261,7 +261,7 @@ modelHistory = np.load('../history/history_model_77_females.npy').item()
 
 print ("HISTORY: ")
 print (modelHistory)
-model_77_females.load_weights('/home/hpc_lkpiel/models/model_77_females.hdf5')
+model_77_females.load_weights('/models/model_77_females.hdf5')
 
 valResult = model_77_females.evaluate(val_data_padded, val_labels_age_group)
 testResult = model_77_females.evaluate(test_data_padded, test_labels_age_group)

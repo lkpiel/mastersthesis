@@ -127,7 +127,7 @@ dnn_2_males.compile(
 print ("dnn_2_males MODEL COMPILED")
 
 
-checkpoint = ModelCheckpoint(filepath='/home/hpc_lkpiel/models/dnn_2_males.hdf5', monitor='val_age_group_accuracy', save_best_only=True)
+checkpoint = ModelCheckpoint(filepath='/models/dnn_2_males.hdf5', monitor='val_age_group_accuracy', save_best_only=True)
 '''
 history = dnn_2_males.fit(
     x=train_i_vectors_males,
@@ -140,7 +140,7 @@ history = dnn_2_males.fit(
 
 np.save('../history/dnn/dnn_2_males.npy', history.history)
 '''
-dnn_2_males.load_weights('/home/hpc_lkpiel/models/dnn_2_males.hdf5')
+dnn_2_males.load_weights('/models/dnn_2_males.hdf5')
 
 
 val_predictions = dnn_2_males.predict(val_i_vectors_males)

@@ -94,7 +94,7 @@ age_group_model.compile(loss='categorical_crossentropy', optimizer=SGD(0.01), me
 print ("AGE GROUP MODEL COMPILED")
 
 '''
-checkpoint = ModelCheckpoint(filepath='/home/hpc_lkpiel/models/dnn_age_group.hdf5', monitor='val_acc', save_best_only=True)
+checkpoint = ModelCheckpoint(filepath='/models/dnn_age_group.hdf5', monitor='val_acc', save_best_only=True)
 
 history = age_group_model.fit(
     x=train_i_vectors,
@@ -112,7 +112,7 @@ modelHistory = np.load('../history/dnn_age_group.npy').item()
 print ("HISTORY: ")
 print (modelHistory)
 '''
-age_group_model.load_weights('/home/hpc_lkpiel/models/dnn_age_group.hdf5')
+age_group_model.load_weights('/models/dnn_age_group.hdf5')
 print (age_group_model.evaluate(train_i_vectors, train_labels_age_group))
 print (age_group_model.evaluate(val_i_vectors, val_labels_age_group))
 print (age_group_model.evaluate(test_i_vectors, test_labels_age_group))

@@ -279,7 +279,7 @@ model_87.compile(loss={'group_output':'categorical_crossentropy', 'gender':'cate
 print ("model_87 COMPILED")
 
 
-checkpoint = ModelCheckpoint(filepath='/home/hpc_lkpiel/models/model_87_gender.hdf5', monitor='val_gender_acc', save_best_only=True)
+checkpoint = ModelCheckpoint(filepath='/models/model_87_gender.hdf5', monitor='val_gender_acc', save_best_only=True)
 
 '''
 
@@ -300,7 +300,7 @@ print ("HISTORY: ")
 print (modelHistory)
 '''
 
-model_87.load_weights('/home/hpc_lkpiel/models/model_87.hdf5')
+model_87.load_weights('/models/model_87.hdf5')
 '''
 valResult = model_87.evaluate([val_data_padded, val_i_vectors], [val_labels_age_group, val_labels_gender])
 testResult = model_87.evaluate([test_data_padded, test_i_vectors], [test_labels_age_group, test_labels_gender] )

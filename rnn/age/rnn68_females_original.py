@@ -278,7 +278,7 @@ model_68.compile(loss='categorical_crossentropy',
 print ("model_68 COMPILED")
 
 
-checkpoint = ModelCheckpoint(filepath='/home/hpc_lkpiel/models/model_68.hdf5', monitor='val_acc', save_best_only=True)
+checkpoint = ModelCheckpoint(filepath='/models/model_68.hdf5', monitor='val_acc', save_best_only=True)
 
 '''
 history = model_68.fit([train_data_padded, train_i_vectors],
@@ -297,7 +297,7 @@ print ("HISTORY: ")
 print (modelHistory)
 '''
 
-model_68.load_weights('/home/hpc_lkpiel/models/model_68.hdf5')
+model_68.load_weights('/models/model_68.hdf5')
 
 val_predictions = model_68.predict([val_data_padded, val_i_vectors_females])
 print ("VAL PREDICTED")

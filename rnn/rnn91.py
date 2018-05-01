@@ -261,7 +261,7 @@ model_91.compile(loss={'age_output':'mse', 'gender':'categorical_crossentropy'},
 print ("model_91 COMPILED")
 
 
-checkpoint = ModelCheckpoint(filepath='/home/hpc_lkpiel/models/model_91.hdf5', monitor='val_age_output_age_group_accuracy', save_best_only=True)
+checkpoint = ModelCheckpoint(filepath='/models/model_91.hdf5', monitor='val_age_output_age_group_accuracy', save_best_only=True)
 
 
 history = model_91.fit([train_data_padded],
@@ -279,7 +279,7 @@ modelHistory = np.load('../history/history_model_91.npy').item()
 print ("HISTORY: ")
 print (modelHistory)
 
-model_91.load_weights('/home/hpc_lkpiel/models/model_91.hdf5')
+model_91.load_weights('/models/model_91.hdf5')
 
 
 

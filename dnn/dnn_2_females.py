@@ -127,7 +127,7 @@ dnn_2_females.compile(
 print ("dnn_2_females MODEL COMPILED")
 
 
-checkpoint = ModelCheckpoint(filepath='/home/hpc_lkpiel/models/dnn_2_females.hdf5', monitor='val_age_group_accuracy', save_best_only=True)
+checkpoint = ModelCheckpoint(filepath='/models/dnn_2_females.hdf5', monitor='val_age_group_accuracy', save_best_only=True)
 
 history = dnn_2_females.fit(
     x=train_i_vectors_females,
@@ -141,7 +141,7 @@ history = dnn_2_females.fit(
 np.save('../history/dnn/dnn_2_females.npy', history.history)
 
 
-dnn_2_females.load_weights('/home/hpc_lkpiel/models/dnn_2_females.hdf5')
+dnn_2_females.load_weights('/models/dnn_2_females.hdf5')
 
 
 val_predictions = dnn_2_females.predict(val_i_vectors_females)

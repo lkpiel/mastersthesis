@@ -211,7 +211,7 @@ dnn_3 = Sequential([
 ])
 
 dnn_3.compile(loss='categorical_crossentropy', optimizer=SGD(0.001), metrics=['accuracy'])
-dnn_3.load_weights('/home/hpc_lkpiel/models/dnn_3.hdf5')
+dnn_3.load_weights('/models/dnn_3.hdf5')
 
 print ("dnn_3 MODEL COMPILED")
 
@@ -235,7 +235,7 @@ dnn_2_males.compile(
     optimizer=SGD(lr=0.01),
 )
 
-dnn_2_males.load_weights('/home/hpc_lkpiel/models/dnn_2_males.hdf5')
+dnn_2_males.load_weights('/models/dnn_2_males.hdf5')
 print ("dnn_2_males WEIGHTS LOADED")
 
 
@@ -276,7 +276,7 @@ model_63.compile(loss='categorical_crossentropy',
                     metrics=['accuracy'])
 
 
-model_63.load_weights('/home/hpc_lkpiel/models/model_63.hdf5')
+model_63.load_weights('/models/model_63.hdf5')
 
 print ("model_63 WEIGHTS LOADED")
 

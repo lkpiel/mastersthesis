@@ -268,7 +268,7 @@ model_95.compile(loss='mse',
 print ("model_95 COMPILED")
 
 
-checkpoint = ModelCheckpoint(filepath='/home/hpc_lkpiel/models/model_95.hdf5', monitor='val_age_group_accuracy', save_best_only=True)
+checkpoint = ModelCheckpoint(filepath='/models/model_95.hdf5', monitor='val_age_group_accuracy', save_best_only=True)
 
 
 history = model_95.fit([train_data_padded, train_i_vectors],
@@ -286,7 +286,7 @@ modelHistory = np.load('../../history/history_model_95.npy').item()
 print ("HISTORY: ")
 print (modelHistory)
 
-model_95.load_weights('/home/hpc_lkpiel/models/model_95.hdf5')
+model_95.load_weights('/models/model_95.hdf5')
 
 
 val_predictions = model_95.predict([val_data_padded, val_i_vectors])

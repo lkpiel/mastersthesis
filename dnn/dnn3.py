@@ -110,7 +110,7 @@ dnn_3.compile(loss='categorical_crossentropy', optimizer=SGD(0.001), metrics=['a
 print ("dnn_3 MODEL COMPILED")
 
 
-checkpoint = ModelCheckpoint(filepath='/home/hpc_lkpiel/models/dnn_3.hdf5', monitor='val_acc', save_best_only=True)
+checkpoint = ModelCheckpoint(filepath='/models/dnn_3.hdf5', monitor='val_acc', save_best_only=True)
 
 '''
 history = dnn_3.fit(
@@ -129,7 +129,7 @@ print ("HISTORY: ")
 print (modelHistory)
 print ("DONE dnn_3")
 '''
-dnn_3.load_weights('/home/hpc_lkpiel/models/dnn_3.hdf5')
+dnn_3.load_weights('/models/dnn_3.hdf5')
 
 
 val_predictions = dnn_3.predict(val_i_vectors)

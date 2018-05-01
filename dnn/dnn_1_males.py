@@ -112,8 +112,8 @@ dnn_1_males.compile(loss='categorical_crossentropy', optimizer=SGD(0.005), metri
 print ("dnn_1_males MODEL COMPILED")
 
 
-checkpoint = ModelCheckpoint(filepath='/home/hpc_lkpiel/models/dnn_1_males.hdf5', monitor='val_acc', save_best_only=True)
-checkpointVal = ModelCheckpoint(filepath='/home/hpc_lkpiel/models/dnn_1_males_loss.hdf5', monitor='val_loss', save_best_only=True)
+checkpoint = ModelCheckpoint(filepath='/models/dnn_1_males.hdf5', monitor='val_acc', save_best_only=True)
+checkpointVal = ModelCheckpoint(filepath='/models/dnn_1_males_loss.hdf5', monitor='val_loss', save_best_only=True)
 
 
 
@@ -132,7 +132,7 @@ modelHistory = np.load('../history/dnn/dnn_1_males.npy').item()
 print ("HISTORY: ")
 print (modelHistory)
 
-dnn_1_males.load_weights('/home/hpc_lkpiel/models/dnn_1_males.hdf5')
+dnn_1_males.load_weights('/models/dnn_1_males.hdf5')
 
 
 
@@ -153,7 +153,7 @@ np.save('/home/hpc_lkpiel/predictions/test/dnn_1_males.npy', test_predictions)
 print ("TEST 1 SAVED")
 
 
-dnn_1_males.load_weights('/home/hpc_lkpiel/models/dnn_1_males_loss.hdf5')
+dnn_1_males.load_weights('/models/dnn_1_males_loss.hdf5')
 
 
 

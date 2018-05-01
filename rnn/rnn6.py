@@ -80,7 +80,7 @@ model_6.compile(loss='categorical_crossentropy', optimizer=Adam(lr=0.001), metri
 print ("model_6 COMPILED")
 
 
-checkpoint = ModelCheckpoint(filepath='/home/hpc_lkpiel/models/model_6.hdf5', monitor='val_loss', save_best_only=True)
+checkpoint = ModelCheckpoint(filepath='/models/model_6.hdf5', monitor='val_loss', save_best_only=True)
 
 history = model_6.fit(x=train_data_padded,
         y=train_labels_age_group,
@@ -96,7 +96,7 @@ modelHistory = np.load('../history/history_model_6.npy').item()
 
 print ("HISTORY: ")
 print (modelHistory)
-model_6.load_weights('/home/hpc_lkpiel/models/model_6.hdf5')
+model_6.load_weights('/models/model_6.hdf5')
 
 valResult = model_6.evaluate(val_data_padded, val_labels_age_group)
 testResult = model_6.evaluate(test_data_padded, test_labels_age_group)

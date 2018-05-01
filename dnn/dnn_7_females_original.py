@@ -138,7 +138,7 @@ multi_model.compile(loss={'gender_output':'categorical_crossentropy', 'age_outpu
 print ("dnn_7 MODEL COMPILED")
 
 
-checkpoint = ModelCheckpoint(filepath='/home/hpc_lkpiel/models/dnn_7.hdf5', monitor='val_gender_output_acc', save_best_only=True)
+checkpoint = ModelCheckpoint(filepath='/models/dnn_7.hdf5', monitor='val_gender_output_acc', save_best_only=True)
 
 reduce_lr = ReduceLROnPlateau(monitor='val_group_output_loss', factor=0.8,
                               patience=1, min_lr=0.0001, verbose=1)
@@ -159,7 +159,7 @@ print (modelHistory)
 print ("DONE dnn_7")
 '''
 
-multi_model.load_weights('/home/hpc_lkpiel/models/dnn_7.hdf5')
+multi_model.load_weights('/models/dnn_7.hdf5')
 
 
 val_predictions = multi_model.predict(val_i_vectors_females)

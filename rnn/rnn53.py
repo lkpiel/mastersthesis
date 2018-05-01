@@ -259,7 +259,7 @@ model_53.compile(loss={'group_output':'categorical_crossentropy', 'age_output':'
 print ("model_53 COMPILED")
 
 
-checkpoint = ModelCheckpoint(filepath='/home/hpc_lkpiel/models/model_53.hdf5', monitor='val_group_output_acc', save_best_only=True)
+checkpoint = ModelCheckpoint(filepath='/models/model_53.hdf5', monitor='val_group_output_acc', save_best_only=True)
 
 
 history = model_53.fit(train_data_padded,
@@ -277,7 +277,7 @@ modelHistory = np.load('../history/history_model_53.npy').item()
 print ("HISTORY: ")
 print (modelHistory)
 
-model_53.load_weights('/home/hpc_lkpiel/models/model_53.hdf5')
+model_53.load_weights('/models/model_53.hdf5')
 
 val_predictions = model_53.predict(val_data_padded)
 print ("VAL PREDICTED")

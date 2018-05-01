@@ -103,7 +103,7 @@ multi_model.compile(loss={'group_output':'categorical_crossentropy', 'gender_out
 print ("dnn_4 MODEL COMPILED")
 
 
-checkpoint = ModelCheckpoint(filepath='/home/hpc_lkpiel/models/dnn_4.hdf5', monitor='val_gender_output_acc', save_best_only=True)
+checkpoint = ModelCheckpoint(filepath='/models/dnn_4.hdf5', monitor='val_gender_output_acc', save_best_only=True)
 '''
 history = multi_model.fit(
     x=train_i_vectors,
@@ -119,7 +119,7 @@ modelHistory = np.load('../history/dnn/dnn_4_gender.npy').item()
 print ("HISTORY: ")
 print (modelHistory)
 '''
-multi_model.load_weights('/home/hpc_lkpiel/models/dnn_4.hdf5')
+multi_model.load_weights('/models/dnn_4.hdf5')
 
 print ("DONE dnn_4")
 

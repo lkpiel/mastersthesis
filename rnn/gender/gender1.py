@@ -237,7 +237,7 @@ gender_1.compile(loss='categorical_crossentropy', optimizer="sgd", metrics=['acc
 print ("gender_1 COMPILED")
 
 
-checkpoint = ModelCheckpoint(filepath='/home/hpc_lkpiel/models/gender_1.hdf5', monitor='val_acc', save_best_only=True)
+checkpoint = ModelCheckpoint(filepath='/models/gender_1.hdf5', monitor='val_acc', save_best_only=True)
 '''
 history = gender_1.fit(x=train_data_padded,
         y=train_labels_gender,
@@ -254,7 +254,7 @@ modelHistory = np.load('/home/hpc_lkpiel//history/gender/gender_1.npy').item()
 print ("HISTORY: ")
 print (modelHistory)
 '''
-gender_1.load_weights('/home/hpc_lkpiel/models/gender_1.hdf5')
+gender_1.load_weights('/models/gender_1.hdf5')
 
 
 

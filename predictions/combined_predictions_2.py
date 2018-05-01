@@ -269,7 +269,7 @@ model_94_females_original = Model(inputs=input_layer, outputs=[output_layer_1, o
 model_94_females_original.compile(loss={'gender_output':'categorical_crossentropy', 'age_output':'mse'},
                     optimizer=SGD(0.01),
                     metrics={'gender_output':'accuracy','age_output':age_group_accuracy})
-model_94_females_original.load_weights('/home/hpc_lkpiel/models/model_94.hdf5')
+model_94_females_original.load_weights('/models/model_94.hdf5')
 
 
 
@@ -285,7 +285,7 @@ dnn_3 = Sequential([
     Dense(2, activation='softmax')
 ])
 dnn_3.compile(loss='categorical_crossentropy', optimizer=SGD(0.001), metrics=['accuracy'])
-dnn_3.load_weights('/home/hpc_lkpiel/models/dnn_3.hdf5')
+dnn_3.load_weights('/models/dnn_3.hdf5')
 print ("dnn_3 WEIGHTS LOADED")
 
 
@@ -304,7 +304,7 @@ dnn_2_males = Sequential([
     Dense(1)
 ])
 dnn_2_males.compile(loss='mse',optimizer=SGD(lr=0.01))
-dnn_2_males.load_weights('/home/hpc_lkpiel/models/dnn_2_males.hdf5')
+dnn_2_males.load_weights('/models/dnn_2_males.hdf5')
 print ("dnn_2_males WEIGHTS LOADED")
 
 
@@ -323,7 +323,7 @@ model_43_males = Sequential([
     Dense(3, activation='softmax')
 ])
 model_43_males.compile(loss='categorical_crossentropy', optimizer=SGD(0.01), metrics=['accuracy'])
-model_43_males.load_weights('/home/hpc_lkpiel/models/model_43_males.hdf5')
+model_43_males.load_weights('/models/model_43_males.hdf5')
 print ("model_43 WEIGHTS LOADED")
 
 
@@ -350,7 +350,7 @@ model_57_males = Model(inputs=[input_layer, input_layer_2], outputs=output_layer
 model_57_males.compile(loss='categorical_crossentropy',
                     optimizer=SGD(0.01),
                     metrics=['accuracy'])
-model_57_males.load_weights('/home/hpc_lkpiel/models/model_57_males.hdf5')
+model_57_males.load_weights('/models/model_57_males.hdf5')
 
 print ("model_57 WEIGHTS LOADED")
 
@@ -372,7 +372,7 @@ model_65_males = Sequential([
     Dense(3, activation='softmax')
 ])
 model_65_males.compile(loss='categorical_crossentropy', optimizer="adam", metrics=['accuracy'])
-model_65_males.load_weights('/home/hpc_lkpiel/models/model_65_males.hdf5')
+model_65_males.load_weights('/models/model_65_males.hdf5')
 print ("model_65_males WEIGHTS LOADED")
 
 
@@ -401,7 +401,7 @@ dnn_6_females_original = Model(inputs=input_layer, outputs=[output_layer_1, outp
 dnn_6_females_original.compile(loss={'group_output':'categorical_crossentropy', 'age_output':'mse'},
                     optimizer="sgd",
                     metrics={'group_output':'accuracy','age_output':age_group_accuracy})
-dnn_6_females_original.load_weights("/home/hpc_lkpiel/models/dnn_6.hdf5")
+dnn_6_females_original.load_weights("/models/dnn_6.hdf5")
 print ("dnn_6 MODEL COMPILED")
 
 
@@ -425,7 +425,7 @@ z = Dropout(0.1)(z)
 output_layer_1 = Dense(3, activation='softmax')(z)
 model_63_females_original = Model(inputs=[input_layer, input_layer_2], outputs=output_layer_1)
 model_63_females_original.compile(loss='categorical_crossentropy', optimizer="adam", metrics=['accuracy'])
-model_63_females_original.load_weights('/home/hpc_lkpiel/models/model_63.hdf5')
+model_63_females_original.load_weights('/models/model_63.hdf5')
 print("MODEL 63 females original weights loaded")
 
 
@@ -447,7 +447,7 @@ model_65_females_original = Sequential([
     Dense(3, activation='softmax')
 ])
 model_65_females_original.compile(loss='categorical_crossentropy', optimizer="adam", metrics=['accuracy'])
-model_65_females_original.load_weights('/home/hpc_lkpiel/models/model_65.hdf5')
+model_65_females_original.load_weights('/models/model_65.hdf5')
 
 
 

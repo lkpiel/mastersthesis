@@ -264,7 +264,7 @@ model_93.compile(loss={'gender_output':'categorical_crossentropy', 'age_output':
 print ("multi_model MODEL COMPILED")
 
 
-checkpoint = ModelCheckpoint(filepath='/home/hpc_lkpiel/models/model_93.hdf5', monitor='val_age_output_age_group_accuracy', save_best_only=True)
+checkpoint = ModelCheckpoint(filepath='/models/model_93.hdf5', monitor='val_age_output_age_group_accuracy', save_best_only=True)
 
 '''
 history = model_93.fit(x=train_data_padded,
@@ -284,7 +284,7 @@ print (modelHistory)
 print (model_93.evaluate(val_data_padded, [val_labels_gender, val_labels_age]))
 print (model_93.evaluate(test_data_padded, [test_labels_gender, test_labels_age]))
 '''
-model_93.load_weights('/home/hpc_lkpiel/models/model_93.hdf5')
+model_93.load_weights('/models/model_93.hdf5')
 
 val_predictions = model_93.predict(val_data_padded)
 print ("VAL PREDICTED")
