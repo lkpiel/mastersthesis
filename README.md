@@ -10,6 +10,7 @@ This is a repository for Leo Kristopher Piel's Master's thesis. It contains code
 * **predictions:** contains models' predictions on validation and test data.
 * **rnn:** contains all the built RNN models
 * **survey:** contains survey results in survey.csv and data analysis.
+<br>
 * **combined_predictions_1.py:** ensemble model, where best models for males' or females' age group identifciation was used after predicting gender.
 * **combined_predictions_2.py:** ensemble model, where combination of the best models for males' or females' age group identification was used after predicting gender.
 * **merge_predictions.py:** brings out all the results of different models and includes the ensemble models created for boosting the accuracies.
