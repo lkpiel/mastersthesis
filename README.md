@@ -2,7 +2,7 @@
 ### Leo Kristopher Piel's Master's Thesis
 This is a repository for Leo Kristopher Piel's Master's thesis. It contains code for the built models and conducted expoeriments
 ### Project structure
-#### Folders and Files
+#### Folders
 * **baseline:** contains files related to baseline system predictions analysis.
 * **dnn:** contains all the saved feedforward dnn models. Also includes dnn.py predictions in file dnn_predicted_labels.npy that were used as labels for some of the trained RNN models.
 * **history:** contains files with information about the training process of all the saved models.
@@ -10,7 +10,7 @@ This is a repository for Leo Kristopher Piel's Master's thesis. It contains code
 * **predictions:** contains models' predictions on validation and test data.
 * **rnn:** contains all the built RNN models
 * **survey:** contains survey results in survey.csv and data analysis.
-  
+#### Files
 * **combined_predictions_1.py:** ensemble model, where best models for males' or females' age group identifciation was used after predicting gender.
 * **combined_predictions_2.py:** ensemble model, where combination of the best models for males' or females' age group identification was used after predicting gender.
 * **merge_predictions.py:** brings out all the results of different models and includes the ensemble models created for boosting the accuracies.
