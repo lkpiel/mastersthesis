@@ -4,4 +4,4 @@ This is a repository for Leo Kristopher Piel's Master's thesis. It contains code
 ### Project structure
 #### Folders
 * Baseline
-- Contains files related to baseline system predictions analysis.
+-- Contains files related to baseline system predictions analysis.
