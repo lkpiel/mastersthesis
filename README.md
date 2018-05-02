@@ -8,7 +8,7 @@ This is a repository for Leo Kristopher Piel's Master's thesis. It contains code
 * **baseline:** contains files related to baseline system predictions analysis.
 * **dnn:** contains all the saved feedforward dnn models. Also includes dnn.py predictions in file dnn_predicted_labels.npy that were used as labels for some of the trained RNN models.
 * **history:** contains files with information about the training process of all the saved models.
-* **models:** contains the saved state of the models. Models were mostly saved during the highest point of validation accuracy in training process
+* **models:** contains the saved state of the models. Models were mostly saved during the highest point of validation accuracy in training process. Two of the missing states can be found here:
   * gender_6.hdf5: https://drive.google.com/open?id=1qTjkdjSpG8GSOwSuHSb1wRH3p9twQcdK
   * model_22.hdf5: https://drive.google.com/open?id=1Gc_glXGtS-cmRvlO5e2sNtJaWggR0QE1
 * **predictions:** contains models' predictions on validation and test data.
