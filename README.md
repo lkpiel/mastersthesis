@@ -12,7 +12,7 @@ This is a repository for Leo Kristopher Piel's Master's thesis. It contains code
   * gender_6.hdf5: https://drive.google.com/open?id=1qTjkdjSpG8GSOwSuHSb1wRH3p9twQcdK
   * model_22.hdf5: https://drive.google.com/open?id=1Gc_glXGtS-cmRvlO5e2sNtJaWggR0QE1
   
-* **predictions:** contains models' predictions on validation and test data. Predictions ending with _males.py or _females.py are trained on gender specific data. Predictions ending with _males_original.py or _females_original.py are the ones of the models trained on the whole dataset.
+* **predictions:** contains models' predictions on validation and test data. Predictions ending with _males.py or _females.py are the ones of the models that were trained on gender specific data. Predictions ending with _males_original.py or _females_original.py are the ones of the models trained on the whole dataset.
 * **rnn:** contains all the built RNN models
 * **survey:** contains survey results in survey.csv and data analysis.
 #### Files
