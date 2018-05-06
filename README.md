@@ -15,7 +15,7 @@ This is a repository for Leo Kristopher Piel's Master's thesis. It contains code
 * **rnn:** contains all the built RNN models
 * **survey:** contains survey results in survey.csv and data analysis.
 #### Files
-* **History.ipynb:** analysis of the training process of the models. Creation of confusion matrices.
+* **History.ipynb:** Jupyter Notebook of the analysis of the training process of the models. Creation of confusion matrices.
 * **Results.xlsx:**
   * **Sheet 1:** accuracies of different models on validation and test data.
   * **Sheet 2:** Analysis of data division into age groups.
